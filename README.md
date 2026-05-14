@@ -1,17 +1,27 @@
-## JavaScript Performance Test - SPA
-Single-page application (SPA) for task management.
+<div align="center">
 
-## Developer Information
-Name: [Maryhug Durán]
-Clan: [Hamilton]
-Email: [maryhug.it@gmail.com]
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+  <img src="https://img.shields.io/badge/JSON%20Server-000000?style=for-the-badge&logo=json&logoColor=white" />
 
-## Execution Instructions
-### Prerequisites
-- Node.js installed (v14 or higher)
-- npm (comes with Node.js)
+  <h1>Task Manager SPA</h1>
+  <p>Aplicación de página única para gestión de tareas construida con JavaScript vanilla y Vite. Incluye autenticación con roles (Admin/User), guardián de rutas, dashboard y CRUD completo de tareas.</p>
 
-## Project Structure
+</div>
+
+---
+
+## Vistas
+
+| Vista | Descripción |
+|---|---|
+| `Login / Register` | Autenticación y registro de usuarios |
+| `Dashboard` | Resumen de tareas del usuario |
+| `Task` | Listado de tareas con filtros |
+| `CreateTask` | Formulario de creación de tareas |
+| `Profile` | Perfil del usuario |
+
+## Arquitectura
 ```
 PruebaJavaScript/
 ├── index.html             
@@ -44,73 +54,39 @@ PruebaJavaScript/
       │   └── Register.js
       └── utils/             
           ├── helpers.js
-          └── validators.js
-      
-      
-      
+          └── validators.js      
 ````
 
-## Test Users
+## Tecnologías
 
+- JavaScript vanilla con ES6 Modules
+- Vite como bundler
+- JSON Server como API REST simulada
+- CSS personalizado con animaciones
+
+## Instalación y uso
+
+```bash
+git clone https://github.com/maryhug/task-manager-spa.git
+cd task-manager-spa
+npm install
+```
+
+```bash
+# Terminal 1 — API REST
+npm run server
+
+# Terminal 2 — Frontend
+npm run dev
+```
+
+## Test Users
 - Admin
   - Email: admin@admin.com
   - Password: admin123
-
 - User
   - Email: user@test.com
   - Password: user123
 
-## Technologies Used
-- Frontend: HTML5, CSS3, JavaScript ES6+ (Vanilla)
-- Backend Mock: json-server
-- Styles: Custom CSS
-- Architecture: SPA with ES6 modules
-
-## Technical Features
-- 100% functional SPA without frameworks
-
-- Modularization with ES6 Modules
-
-- Router with route guardian
-
-- Centralized store for global state
-
-- Persistence with localStorage
-
-- Smooth animations and transitions
-
-- Reusable components
-
-- Separation of responsibilities
-
-- Clean code
-
 ## Frontend
 - https://www.figma.com/design/K3PmKIOlfEsjnbwP54Yc2x/Sin-t%C3%ADtulo?node-id=33-2&p=f
-
-## Remove git
-- git config --global --unset user.name
-- git config --global --unset user.email
-
-## Add your user
-- git config --global user.name ""
-- git config --global user.email ""
-
-
-## Update Node.js to 20 or 22
-
-1. Install nvm (if you don't have it):
-   1. curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | Bash
-2. source ~/.bashrc
-
-3. Install Node 22
-   1. nvm install 22
-   2. nvm use 22
-
-4. Check:
-   1. node -v
-
-5. Clean and install dependencies again (important)
-   1. rm -rf node_modules package-lock.json
-   2. npm install
-   3. npm run dev
